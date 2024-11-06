@@ -1,0 +1,16 @@
+
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+hi
+{'acc': tensor([0., 0., 0., 0., 0., 0., 0., 0.], device='cuda:0'), 'token_acc': tensor([0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.5000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.0000, 0.5000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|                                                                                                                                      | 0/3750 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 181, in <module>
+    print(accs.type)
+AttributeError: 'dict' object has no attribute 'type'

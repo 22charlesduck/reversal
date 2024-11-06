@@ -1,0 +1,35 @@
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 169, in <module>
+    logits, loss, accs = model(x, y)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/base_model.py", line 83, in forward
+    tok_emb = self.embed_tokens(idx)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 163, in forward
+    return F.embedding(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/functional.py", line 2237, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+IndexError: index out of range in self
+tensor([[   28,    64,  1507, 17059,    12,    65,  1507,    -1,    -1],
+        [   28,    64, 15187,  2327,    12,    65, 15187,    -1,    -1],
+        [   28,    65,   486, 43697,    12,    64,   486,    -1,    -1],
+        [   28,    65,  2931, 21895,    12,    64,  2931,    -1,    -1],
+        [   28,    64,  1157, 40639,    12,    65,  1157,    -1,    -1],
+        [   28,    64, 23055,  1433,    12,    65, 23055,    -1,    -1],
+        [   28,    65,  2713, 26429,    12,    64,  2713,    -1,    -1],
+        [   28,    64, 23237,  1899,    12,    65, 23237,    -1,    -1],
+        [   28,    65, 48000,  5892,    12,    64, 48000,    -1,    -1],
+        [   28,    64,  2998, 26912,    12,    65,  2998,    -1,    -1],
+        [   28,    64,  1485, 40652,    12,    65,  1485,    -1,    -1],
+        [   28,    64,  2931, 22291,    12,    65,  2931,    -1,    -1],
+        [   28,    65,    15,  2079,  2920,    12,    64,    15,  2079],
+        [   28,    64,    15,  2791,  6659,    12,    65,    15,  2791],
+        [   28,    64, 44215,  5892,    12,    65, 44215,    -1,    -1],
+        [   28,    64,  8784,  1731,    12,    65,  8784,    -1,    -1]])

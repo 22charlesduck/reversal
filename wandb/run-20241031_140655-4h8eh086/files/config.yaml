@@ -1,0 +1,114 @@
+wandb_version: 1
+
+model:
+  desc: null
+  value: gpt2-large
+dataset:
+  desc: null
+  value: reverse
+n_train:
+  desc: null
+  value: 60000
+n_test:
+  desc: null
+  value: 5000
+n_nodes:
+  desc: null
+  value: 20000
+num_nodes:
+  desc: null
+  value: 50
+deg:
+  desc: null
+  value: 2
+path_len:
+  desc: null
+  value: 5
+mate_in:
+  desc: null
+  value: 2
+unrolled:
+  desc: null
+  value: true
+batch_size:
+  desc: null
+  value: 128
+lr:
+  desc: null
+  value: 0.0005
+weight_decay:
+  desc: null
+  value: 0.01
+epochs:
+  desc: null
+  value: 300
+save_every:
+  desc: null
+  value: 10000
+teacherless:
+  desc: null
+  value: false
+reverse:
+  desc: null
+  value: false
+eval_train:
+  desc: null
+  value: false
+eval_every:
+  desc: null
+  value: 3750
+use_wandb:
+  desc: null
+  value: true
+wandb_entity:
+  desc: null
+  value: cdingg
+compile:
+  desc: null
+  value: false
+use_flash:
+  desc: null
+  value: true
+block_size:
+  desc: null
+  value: 10
+vocab_size:
+  desc: null
+  value: 50257
+teacherless_token:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.15
+    cli_version: 0.16.2
+    framework: huggingface
+    huggingface_version: 4.37.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1730398015.747208
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 55
+      - 100
+      2:
+      - 1
+      - 11
+      - 49
+      - 55
+      - 100
+      3:
+      - 16
+      - 17
+      - 23
+      - 37
+      4: 3.10.15
+      5: 0.16.2
+      6: 4.37.2
+      8:
+      - 5
+      13: linux-x86_64

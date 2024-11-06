@@ -1,0 +1,11 @@
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 168, in <module>
+    logits, loss, accs = model(x, y)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/base_model.py", line 80, in forward
+    assert seq_len <= self.config.block_size, f"Cannot forward sequence of length {seq_len}, block size is only " \
+AssertionError: Cannot forward sequence of length 9, block size is only 6

@@ -1,0 +1,52 @@
+
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [0/5000] Loss: 1.6141 Acc: 0.03:  15%|████████████▊                                                                       | 573/3750 [01:28<08:11,  6.46it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 185, in <module>
+    'Epoch: [{}/{}] Loss: {:.4f} Acc: {:.2f}'.format(ep, args.epochs, total_loss.get(),
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/_tensor.py", line 965, in __format__
+    return self.item().__format__(format_spec)
+KeyboardInterrupt

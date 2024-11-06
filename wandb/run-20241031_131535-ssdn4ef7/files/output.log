@@ -1,0 +1,91 @@
+
+hi
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [0/5000] Loss: 2.0112 Acc: 0.08:   4%|███▌                                                                                | 160/3750 [02:30<56:25,  1.06it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 160, in <module>
+    for x, y in train_bar:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/aditi/reversal/data/reverse.py", line 95, in __getitem__
+    return x.to(self.device), y.long().to(self.device)
+KeyboardInterrupt

@@ -1,0 +1,140 @@
+
+  0%|                                                                                                                                       | 0/469 [00:00<?, ?it/s]
+  0%|                                                                                                                                       | 0/469 [00:00<?, ?it/s]/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [0/300] Loss: 1.6788 Acc: 0.06:  21%|██████████████████▎                                                                    | 99/469 [01:35<05:27,  1.13it/s]
+
+Epoch: [0/300] Loss: 1.6751 Acc: 0.07:  22%|██████████████████▌                                                                   | 101/469 [01:37<05:33,  1.10it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.6714 Acc: 0.07:  22%|██████████████████▉                                                                   | 103/469 [01:39<05:22,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6679 Acc: 0.07:  22%|███████████████████▎                                                                  | 105/469 [01:41<05:18,  1.14it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6625 Acc: 0.07:  23%|███████████████████▊                                                                  | 108/469 [01:43<05:15,  1.14it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.6594 Acc: 0.06:  23%|████████████████████▏                                                                 | 110/469 [01:45<05:18,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6562 Acc: 0.06:  24%|████████████████████▌                                                                 | 112/469 [01:47<05:13,  1.14it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6520 Acc: 0.06:  25%|█████████████████████                                                                 | 115/469 [01:49<05:14,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6496 Acc: 0.06:  25%|█████████████████████▍                                                                | 117/469 [01:51<05:12,  1.13it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.6477 Acc: 0.06:  25%|█████████████████████▊                                                                | 119/469 [01:53<05:13,  1.12it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6460 Acc: 0.06:  26%|██████████████████████▏                                                               | 121/469 [01:55<05:08,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6462 Acc: 0.06:  26%|██████████████████████▋                                                               | 124/469 [01:57<05:02,  1.14it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6473 Acc: 0.06:  27%|███████████████████████                                                               | 126/469 [01:59<04:57,  1.15it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.6470 Acc: 0.05:  27%|███████████████████████▍                                                              | 128/469 [02:01<04:56,  1.15it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6451 Acc: 0.05:  28%|███████████████████████▊                                                              | 130/469 [02:03<04:58,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6427 Acc: 0.05:  28%|████████████████████████▍                                                             | 133/469 [02:05<04:57,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6410 Acc: 0.05:  29%|████████████████████████▊                                                             | 135/469 [02:07<04:52,  1.14it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.6394 Acc: 0.06:  29%|█████████████████████████                                                             | 137/469 [02:09<04:55,  1.12it/s]
+decay
+
+Epoch: [0/300] Loss: 1.6512 Acc: 0.06:  30%|█████████████████████████▍                                                            | 139/469 [02:11<04:51,  1.13it/s]
+decay
+decay
+
+Epoch: [0/300] Loss: 1.7364 Acc: 0.06:  30%|██████████████████████████                                                            | 142/469 [02:13<04:51,  1.12it/s]
+decay
+
+Epoch: [0/300] Loss: 1.7515 Acc: 0.05:  31%|██████████████████████████▍                                                           | 144/469 [02:15<04:54,  1.10it/s]
+decay
+
+Epoch: [0/300] Loss: 1.7614 Acc: 0.05:  31%|██████████████████████████▊                                                           | 146/469 [02:17<04:45,  1.13it/s]
+decay
+
+Epoch: [0/300] Loss: 1.7700 Acc: 0.05:  32%|███████████████████████████▏                                                          | 148/469 [02:19<04:46,  1.12it/s]
+decay
+
+Epoch: [0/300] Loss: 1.7764 Acc: 0.05:  32%|███████████████████████████▋                                                          | 151/469 [02:21<04:38,  1.14it/s]
+decay
+Epoch: [0/300] Loss: 1.7762 Acc: 0.05:  33%|████████████████████████████                                                          | 153/469 [02:23<04:57,  1.06it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 160, in <module>
+    for x, y in train_bar:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/aditi/reversal/data/reverse.py", line 95, in __getitem__
+    return x.to(self.device), y.long().to(self.device)
+KeyboardInterrupt

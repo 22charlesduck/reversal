@@ -1,0 +1,15 @@
+
+
+
+  0%|                                                                                                                                       | 0/313 [00:00<?, ?it/s]
+Epoch: [0/5000] Loss: 3.1779 Acc: 0.00:   1%|█▏                                                                                   | 50/3750 [00:07<09:29,  6.50it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 159, in <module>
+    torch.save(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 628, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 502, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 473, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+RuntimeError: Parent directory ./checkpoints does not exist.

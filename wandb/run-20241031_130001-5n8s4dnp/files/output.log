@@ -1,0 +1,9 @@
+
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|                                                                                                                                      | 0/3750 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 180, in <module>
+    total_loss.update(loss.item(), x.shape[0] * train_data.num_target_tokens)
+RuntimeError: a Tensor with 8 elements cannot be converted to Scalar

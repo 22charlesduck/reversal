@@ -1,0 +1,23 @@
+  0%|                                                                                                                                      | 0/3750 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/finetune.py", line 156, in <module>
+    for x, y in train_bar:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 277, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 144, in collate
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 144, in <listcomp>
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 121, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 174, in collate_tensor_fn
+    return torch.stack(batch, 0, out=out)
+RuntimeError: stack expects each tensor to be equal size, but got [7] at entry 0 and [9] at entry 3
