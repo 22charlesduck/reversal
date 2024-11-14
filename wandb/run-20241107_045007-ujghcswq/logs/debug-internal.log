@@ -1,0 +1,196 @@
+2024-11-07 04:50:07,554 INFO    StreamThr :830832 [internal.py:wandb_internal():86] W&B internal server running at pid: 830832, started at: 2024-11-07 04:50:07.553617
+2024-11-07 04:50:07,555 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: status
+2024-11-07 04:50:07,559 INFO    WriterThread:830832 [datastore.py:open_for_write():87] open: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/run-ujghcswq.wandb
+2024-11-07 04:50:07,560 DEBUG   SenderThread:830832 [sender.py:send():382] send: header
+2024-11-07 04:50:07,565 DEBUG   SenderThread:830832 [sender.py:send():382] send: run
+2024-11-07 04:50:07,972 INFO    SenderThread:830832 [dir_watcher.py:__init__():211] watching files in: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files
+2024-11-07 04:50:07,972 INFO    SenderThread:830832 [sender.py:_start_run_threads():1136] run started: ujghcswq with start time 1730973007.55399
+2024-11-07 04:50:07,979 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: check_version
+2024-11-07 04:50:07,980 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: check_version
+2024-11-07 04:50:08,047 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: run_start
+2024-11-07 04:50:08,068 DEBUG   HandlerThread:830832 [system_info.py:__init__():27] System info init
+2024-11-07 04:50:08,068 DEBUG   HandlerThread:830832 [system_info.py:__init__():42] System info init done
+2024-11-07 04:50:08,068 INFO    HandlerThread:830832 [system_monitor.py:start():194] Starting system monitor
+2024-11-07 04:50:08,068 INFO    SystemMonitor:830832 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-11-07 04:50:08,068 INFO    HandlerThread:830832 [system_monitor.py:probe():214] Collecting system info
+2024-11-07 04:50:08,068 INFO    SystemMonitor:830832 [interfaces.py:start():190] Started cpu monitoring
+2024-11-07 04:50:08,069 INFO    SystemMonitor:830832 [interfaces.py:start():190] Started disk monitoring
+2024-11-07 04:50:08,070 INFO    SystemMonitor:830832 [interfaces.py:start():190] Started gpu monitoring
+2024-11-07 04:50:08,070 INFO    SystemMonitor:830832 [interfaces.py:start():190] Started memory monitoring
+2024-11-07 04:50:08,070 INFO    SystemMonitor:830832 [interfaces.py:start():190] Started network monitoring
+2024-11-07 04:50:08,125 DEBUG   HandlerThread:830832 [system_info.py:probe():151] Probing system
+2024-11-07 04:50:08,127 DEBUG   HandlerThread:830832 [system_info.py:_probe_git():136] Probing git
+2024-11-07 04:50:08,135 DEBUG   HandlerThread:830832 [system_info.py:_probe_git():144] Probing git done
+2024-11-07 04:50:08,136 DEBUG   HandlerThread:830832 [system_info.py:probe():199] Probing system done
+2024-11-07 04:50:08,136 DEBUG   HandlerThread:830832 [system_monitor.py:probe():223] {'os': 'Linux-5.14.0-427.13.1.el9_4.x86_64-x86_64-with-glibc2.34', 'python': '3.10.15', 'heartbeatAt': '2024-11-07T09:50:08.125238', 'startedAt': '2024-11-07T09:50:07.544335', 'docker': None, 'cuda': None, 'args': ('--model', 'gpt', '--n_train', '300', '--n_test', '5000', '--batch_size', '128', '--dataset', 'reverse', '--n_nodes', '20000', '--lr', '0.00001', '--epochs', '1000', '--use_wandb', '--wandb_entity', 'cdingg'), 'state': 'running', 'program': '/home/clding/aditi/reversal/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/22charlesduck/reversal', 'commit': '06d34c883a80c64361fae4805f48fa9d907c1261'}, 'email': None, 'root': '/home/clding/aditi/reversal', 'host': 'babel-4-33', 'username': 'clding', 'executable': '/home/clding/miniconda3/envs/reversal/bin/python3', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 3033.3638593749997, 'min': 1500.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3711.447, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3706.068, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3706.742, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}], 'disk': {'/': {'total': 220.41033172607422, 'used': 61.09287643432617}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 7, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 503.2418518066406}}
+2024-11-07 04:50:08,136 INFO    HandlerThread:830832 [system_monitor.py:probe():224] Finished collecting system info
+2024-11-07 04:50:08,136 INFO    HandlerThread:830832 [system_monitor.py:probe():227] Publishing system info
+2024-11-07 04:50:08,136 DEBUG   HandlerThread:830832 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-11-07 04:50:08,974 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/conda-environment.yaml
+2024-11-07 04:50:09,536 DEBUG   HandlerThread:830832 [system_info.py:_save_conda():220] Saving conda packages done
+2024-11-07 04:50:09,537 INFO    HandlerThread:830832 [system_monitor.py:probe():229] Finished publishing system info
+2024-11-07 04:50:09,540 DEBUG   SenderThread:830832 [sender.py:send():382] send: files
+2024-11-07 04:50:09,540 INFO    SenderThread:830832 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-11-07 04:50:09,545 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: python_packages
+2024-11-07 04:50:09,545 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: python_packages
+2024-11-07 04:50:09,546 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: stop_status
+2024-11-07 04:50:09,546 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: stop_status
+2024-11-07 04:50:09,547 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-07 04:50:09,666 DEBUG   SenderThread:830832 [sender.py:send():382] send: telemetry
+2024-11-07 04:50:09,666 DEBUG   SenderThread:830832 [sender.py:send():382] send: telemetry
+2024-11-07 04:50:09,666 DEBUG   SenderThread:830832 [sender.py:send():382] send: run
+2024-11-07 04:50:09,750 INFO    SenderThread:830832 [sender.py:send_run():1010] updated run: ujghcswq
+2024-11-07 04:50:09,808 INFO    wandb-upload_0:830832 [upload_job.py:push():131] Uploaded file /tmp/tmpdzs1arx4wandb/yx8yj2vn-wandb-metadata.json
+2024-11-07 04:50:09,974 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/conda-environment.yaml
+2024-11-07 04:50:09,974 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/config.yaml
+2024-11-07 04:50:09,974 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/output.log
+2024-11-07 04:50:09,975 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/requirements.txt
+2024-11-07 04:50:09,975 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-metadata.json
+2024-11-07 04:50:10,414 DEBUG   SenderThread:830832 [sender.py:send():382] send: exit
+2024-11-07 04:50:10,415 INFO    SenderThread:830832 [sender.py:send_exit():589] handling exit code: 1
+2024-11-07 04:50:10,415 INFO    SenderThread:830832 [sender.py:send_exit():591] handling runtime: 2
+2024-11-07 04:50:10,416 INFO    SenderThread:830832 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-11-07 04:50:10,417 INFO    SenderThread:830832 [sender.py:send_exit():597] send defer
+2024-11-07 04:50:10,417 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:10,417 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 0
+2024-11-07 04:50:10,418 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:10,418 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-11-07 04:50:10,418 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 1
+2024-11-07 04:50:10,418 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:10,418 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 1
+2024-11-07 04:50:10,418 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:10,419 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-11-07 04:50:10,419 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 2
+2024-11-07 04:50:10,419 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:10,419 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 2
+2024-11-07 04:50:10,419 INFO    HandlerThread:830832 [system_monitor.py:finish():203] Stopping system monitor
+2024-11-07 04:50:10,419 DEBUG   SystemMonitor:830832 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-11-07 04:50:10,419 DEBUG   SystemMonitor:830832 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-11-07 04:50:10,419 DEBUG   SystemMonitor:830832 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-11-07 04:50:10,420 INFO    HandlerThread:830832 [interfaces.py:finish():202] Joined cpu monitor
+2024-11-07 04:50:10,421 INFO    HandlerThread:830832 [interfaces.py:finish():202] Joined disk monitor
+2024-11-07 04:50:10,975 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-summary.json
+2024-11-07 04:50:11,054 INFO    HandlerThread:830832 [interfaces.py:finish():202] Joined gpu monitor
+2024-11-07 04:50:11,055 INFO    HandlerThread:830832 [interfaces.py:finish():202] Joined memory monitor
+2024-11-07 04:50:11,055 INFO    HandlerThread:830832 [interfaces.py:finish():202] Joined network monitor
+2024-11-07 04:50:11,056 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,056 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-11-07 04:50:11,056 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 3
+2024-11-07 04:50:11,056 DEBUG   SenderThread:830832 [sender.py:send():382] send: stats
+2024-11-07 04:50:11,056 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,057 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 3
+2024-11-07 04:50:11,057 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,058 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-11-07 04:50:11,058 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 4
+2024-11-07 04:50:11,058 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,058 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 4
+2024-11-07 04:50:11,058 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,058 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-11-07 04:50:11,058 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 5
+2024-11-07 04:50:11,059 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,059 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 5
+2024-11-07 04:50:11,059 DEBUG   SenderThread:830832 [sender.py:send():382] send: summary
+2024-11-07 04:50:11,059 INFO    SenderThread:830832 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-11-07 04:50:11,060 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,060 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-11-07 04:50:11,060 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 6
+2024-11-07 04:50:11,060 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,060 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 6
+2024-11-07 04:50:11,060 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,060 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-11-07 04:50:11,064 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: status_report
+2024-11-07 04:50:11,153 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 7
+2024-11-07 04:50:11,153 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,153 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 7
+2024-11-07 04:50:11,154 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,154 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-11-07 04:50:11,415 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-07 04:50:11,758 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 8
+2024-11-07 04:50:11,758 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: poll_exit
+2024-11-07 04:50:11,758 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,758 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 8
+2024-11-07 04:50:11,759 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:11,759 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-11-07 04:50:11,759 INFO    SenderThread:830832 [job_builder.py:build():296] Attempting to build job artifact
+2024-11-07 04:50:11,759 INFO    SenderThread:830832 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-11-07 04:50:11,779 INFO    SenderThread:830832 [job_builder.py:build():402] adding wandb-job metadata file
+2024-11-07 04:50:11,784 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 9
+2024-11-07 04:50:11,784 DEBUG   SenderThread:830832 [sender.py:send():382] send: artifact
+2024-11-07 04:50:11,784 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:11,785 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 9
+2024-11-07 04:50:11,975 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/config.yaml
+2024-11-07 04:50:11,976 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/output.log
+2024-11-07 04:50:11,976 INFO    Thread-12 :830832 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-summary.json
+2024-11-07 04:50:12,336 INFO    wandb-upload_0:830832 [upload_job.py:push():86] Skipped uploading /home/clding/.local/share/wandb/artifacts/staging/tmpgtgf1zl7
+2024-11-07 04:50:12,415 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-07 04:50:12,463 INFO    wandb-upload_1:830832 [upload_job.py:push():89] Uploaded file /home/clding/.local/share/wandb/artifacts/staging/tmp8t0isl8s
+2024-11-07 04:50:13,152 INFO    SenderThread:830832 [sender.py:send_artifact():1494] sent artifact job-https___github.com_22charlesduck_reversal_train.py - {'id': 'QXJ0aWZhY3Q6MTMxNDYwODQ0NA==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ4NjM3NTgxMg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTMxNDU5OTA4OA==', 'versionIndex': 3}}}
+2024-11-07 04:50:13,152 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:13,152 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-11-07 04:50:13,152 INFO    SenderThread:830832 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-11-07 04:50:13,977 INFO    SenderThread:830832 [dir_watcher.py:finish():388] scan: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files
+2024-11-07 04:50:13,978 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-summary.json wandb-summary.json
+2024-11-07 04:50:13,978 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/conda-environment.yaml conda-environment.yaml
+2024-11-07 04:50:13,978 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/output.log output.log
+2024-11-07 04:50:13,980 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/requirements.txt requirements.txt
+2024-11-07 04:50:13,981 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/config.yaml config.yaml
+2024-11-07 04:50:13,984 INFO    SenderThread:830832 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-metadata.json wandb-metadata.json
+2024-11-07 04:50:13,984 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 10
+2024-11-07 04:50:13,986 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: poll_exit
+2024-11-07 04:50:13,986 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:13,986 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 10
+2024-11-07 04:50:13,987 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:13,987 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-11-07 04:50:13,987 INFO    SenderThread:830832 [file_pusher.py:finish():175] shutting down file pusher
+2024-11-07 04:50:14,166 INFO    wandb-upload_0:830832 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/wandb-summary.json
+2024-11-07 04:50:14,188 INFO    wandb-upload_2:830832 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/conda-environment.yaml
+2024-11-07 04:50:14,201 INFO    wandb-upload_3:830832 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/requirements.txt
+2024-11-07 04:50:14,202 INFO    wandb-upload_4:830832 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/config.yaml
+2024-11-07 04:50:14,209 INFO    wandb-upload_1:830832 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/files/output.log
+2024-11-07 04:50:14,410 INFO    Thread-11 (_thread_body):830832 [sender.py:transition_state():617] send defer: 11
+2024-11-07 04:50:14,410 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:14,410 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 11
+2024-11-07 04:50:14,411 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:14,411 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-11-07 04:50:14,411 INFO    SenderThread:830832 [file_pusher.py:join():181] waiting for file pusher
+2024-11-07 04:50:14,412 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 12
+2024-11-07 04:50:14,412 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:14,412 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 12
+2024-11-07 04:50:14,412 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:14,412 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-11-07 04:50:14,412 INFO    SenderThread:830832 [file_stream.py:finish():595] file stream finish called
+2024-11-07 04:50:14,416 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-07 04:50:14,504 INFO    SenderThread:830832 [file_stream.py:finish():599] file stream finish is done
+2024-11-07 04:50:14,504 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 13
+2024-11-07 04:50:14,505 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: poll_exit
+2024-11-07 04:50:14,505 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:14,505 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 13
+2024-11-07 04:50:14,505 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:14,505 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-11-07 04:50:14,505 INFO    SenderThread:830832 [sender.py:transition_state():617] send defer: 14
+2024-11-07 04:50:14,506 DEBUG   SenderThread:830832 [sender.py:send():382] send: final
+2024-11-07 04:50:14,506 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: defer
+2024-11-07 04:50:14,506 DEBUG   SenderThread:830832 [sender.py:send():382] send: footer
+2024-11-07 04:50:14,506 INFO    HandlerThread:830832 [handler.py:handle_request_defer():172] handle defer: 14
+2024-11-07 04:50:14,506 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: defer
+2024-11-07 04:50:14,506 INFO    SenderThread:830832 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-11-07 04:50:14,507 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-07 04:50:14,507 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: poll_exit
+2024-11-07 04:50:14,507 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-07 04:50:14,507 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: server_info
+2024-11-07 04:50:14,507 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: poll_exit
+2024-11-07 04:50:14,508 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: get_summary
+2024-11-07 04:50:14,508 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: server_info
+2024-11-07 04:50:14,508 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: sampled_history
+2024-11-07 04:50:14,510 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-07 04:50:14,510 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: job_info
+2024-11-07 04:50:14,570 DEBUG   SenderThread:830832 [sender.py:send_request():409] send_request: job_info
+2024-11-07 04:50:14,570 INFO    MainThread:830832 [wandb_run.py:_footer_history_summary_info():3857] rendering history
+2024-11-07 04:50:14,571 INFO    MainThread:830832 [wandb_run.py:_footer_history_summary_info():3889] rendering summary
+2024-11-07 04:50:14,571 INFO    MainThread:830832 [wandb_run.py:_footer_sync_info():3816] logging synced files
+2024-11-07 04:50:14,571 DEBUG   HandlerThread:830832 [handler.py:handle_request():146] handle_request: shutdown
+2024-11-07 04:50:14,572 INFO    HandlerThread:830832 [handler.py:finish():869] shutting down handler
+2024-11-07 04:50:15,510 INFO    WriterThread:830832 [datastore.py:close():296] close: /home/clding/aditi/reversal/wandb/run-20241107_045007-ujghcswq/run-ujghcswq.wandb
+2024-11-07 04:50:15,570 INFO    SenderThread:830832 [sender.py:finish():1572] shutting down sender
+2024-11-07 04:50:15,570 INFO    SenderThread:830832 [file_pusher.py:finish():175] shutting down file pusher
+2024-11-07 04:50:15,571 INFO    SenderThread:830832 [file_pusher.py:join():181] waiting for file pusher

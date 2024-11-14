@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import Dataset
 import numpy as np
 import random
+import string
 from torch.nn.utils.rnn import pad_sequence
 
 
@@ -9,39 +10,56 @@ def generate_and_save(n_nodes, n_test):
     """
     Generate a list of train and testing graphs with fixed-length numbers and save them for reproducibility
     """
-    max_length = len(str(n_nodes - 1))  
     
+    hash = set()
     # Open train file
-    file = open('../data/datasets/reverse/' + 'train_normal_' + str(n_nodes) + '.txt', 'w')
-
-    
+    file = open('../data/datasets/reverse/' + 'train_normalfb' + str(n_nodes) + '.txt', 'w')
+    testfile = open('../data/datasets/reverse/' + 'test_normalfb' + str(n_nodes) + '.txt', 'w')
     for i in range(n_nodes):
-        out = f"=a{i:0{max_length}}-b{i:0{max_length}}" 
-        file.write(out + '\n')
+        stri = ''.join(random.choices(string.ascii_uppercase, k=10))
+        while stri not in hash:
+            stri = ''.join(random.choices(string.ascii_uppercase, k=10))
+            hash.add(stri)
+        mask = "A"*10
+        out = f"=a{i}-b{i}>" 
+        file.write('f' + out + '\n')
+        # file.write(stri + out + '\n')
+        if i %2 == 0:
+            out = f"=b{i}-a{i}>"
+            file.write('@' + out + '\n')
+            # file.write(stri + out + '\n')
+        else:
+            out = f"=b{i}-a{i}>"
+            testfile.write('@' + out + '\n')
+    # for i in range(n_nodes):
+    #     out = f"=a{i}-b{i}>" 
+    #     file.write(out + '\n')
 
-    for i in range(n_nodes // 2):
-        out = f"=b{i:0{max_length}}-a{i:0{max_length}}"
-        file.write(out + '\n')
+    # for i in range(n_nodes // 2):
+    #     out = f"=b{i}-a{i}>"
+    #     file.write(out + '\n')
     
     # for i in range(n_nodes):
-    #     out = f"=a{i:0{max_length}}-b{i:0{max_length}}"
+    #     out = f"=a{i}-b{i}>" 
     #     file.write(out + '\n')
-    
+
     # for i in range(n_nodes // 2):
-    #     out = f"=b{i:0{max_length}}-a{i:0{max_length}}"
+    #     out = f"=b{i}-a{i}>"
     #     file.write(out + '\n')
 
     file.close()
+    testfile.close()
 
-    # Open test file
-    file = open('../data/datasets/reverse/' + 'test_normal_' + str(n_nodes) + '.txt', 'w')
-    for i in range(n_nodes // 2, n_nodes // 2 + n_test):
-        out = f"=b{i:0{max_length}}-a{i:0{max_length}}"
-        file.write(out + '\n')
+    # # Open test file
+    # file = open('../data/datasets/reverse/' + 'test_10maskfb' + str(n_nodes) + '.txt', 'w')
+    # for i in range(n_nodes):
+    #     if i %2 == 1:
+    #         out = f"=b{i}-a{i}>"
+    #         file.write(out + '\n')
 
-    file.close()
+    # file.close()
 
-def prefix_target_list(filename=None, reverse=False):
+def prefix_target_list(filename=None, reverse=False, n_nodes =  2000):
     """
     Load graphs and split them into prefix and target and return the list
     """
@@ -70,6 +88,7 @@ class Reverse(Dataset):
         self.n_nodes = n_nodes
 
         self.data_file = prefix_target_list(self.data_path, reverse=reverse)[:n_samples]
+        print(self.data_file)
         self.tokenized, self.num_prefix_tokens, self.num_target_tokens, self.num_eval_prefix, self.num_eval_target, self.max_target_len = tokenizer.tokenize(self.data_file)
 
         self.num_tokens = self.num_prefix_tokens + self.max_target_len
@@ -85,9 +104,10 @@ class Reverse(Dataset):
         # Create inputs
         x = self.tokenized[idx][:-1].clone()
         y = self.tokenized[idx][1:].clone()
-        # if self.teacherless_token is not None and idx >= self.n_nodes * 3 / 2 and not self.eval_mode:
-        #     x[self.num_prefix_tokens:] = self.teacherless_token
-        #     x = x.to(self.device)
+        if idx % 2 == 1:
+            y[:self.num_prefix_tokens - 1] = -1
+        if self.teacherless_token is not None and idx %2 == 0 and not self.eval_mode:
+            x[self.num_prefix_tokens:] = self.teacherless_token
         # Create targets in the form [-1, ..., -1, 4, 7, 9, 2, ...] where we replace the prefix tokens by -1 so that
         # we can skip their gradient calculation in the loss (double-check if that's correct)
         # y = torch.cat([-torch.ones((self.num_prefix_tokens - 1, )),

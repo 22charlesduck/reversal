@@ -19,7 +19,8 @@ parser.add_argument("--model", type=str, default='gpt', help="Learning rate")
 parser.add_argument("--dataset", default='graph', type=str, help="Choice of dataset")
 parser.add_argument("--n_train", default=200000, type=int, help="Number of training samples")
 parser.add_argument("--n_test", default=10000, type=int, help="Number of test samples")
-parser.add_argument("--num_nodes", default=50, type=int, help="Number of node values in graph")
+parser.add_argument("--num_nodes", default=20000, type=int, help="Number of node values in graph")
+parser.add_argument("--n_nodes", default=20000, type=int, help="Number of node values in graph")
 parser.add_argument("--deg", default=2, type=int, help="Degree of starting node")
 parser.add_argument("--path_len", default=5, type=int, help="Path length in star graph")
 parser.add_argument("--mate_in", default=2, type=int, help="For chess, number of moves to checkmate")
@@ -28,18 +29,31 @@ parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
 parser.add_argument("--lr", type=float, default=5e-4, help="Learning rate")
 parser.add_argument("--weight_decay", type=float, default=1e-2, help="Strength of weight decay")
 parser.add_argument("--epochs", type=int, default=300, help="Number of epochs")
-parser.add_argument("--save_every", type=int, default=40, help="Interval (in steps) at which to save model")
+parser.add_argument("--save_every", type=int, default=120, help="Interval (in steps) at which to save model")
 parser.add_argument("--teacherless", action=argparse.BooleanOptionalAction, default=False, help="Standard or teacherless training")
 parser.add_argument("--reverse", action=argparse.BooleanOptionalAction, default=False, help="Standard format or reverse targets")
 parser.add_argument("--eval_train", action=argparse.BooleanOptionalAction, default=False, help="Eval for training set")
 parser.add_argument("--eval_every", type=int, default=3750, help="Interval (in steps) to evaluate the model on test")
 parser.add_argument("--use_wandb", action=argparse.BooleanOptionalAction, default=False, help="Whether to use wandb")
 parser.add_argument("--wandb_entity", type=str, default=None, help="Wandb username")
+parser.add_argument("--n_layer", type=int, default=36, help="Number of layers for the transformer model")
+parser.add_argument("--n_head", type=int, default=20, help="Number of attention heads")
+parser.add_argument("--n_embd", type=int, default=1280, help="Embedding dimension size")
+parser.add_argument("--resume", action=argparse.BooleanOptionalAction, default=False, help="Resume training from checkpoint")
 
 args = parser.parse_args()
 
+import os
+import torch
+
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6"  # Only allow GPU 0, or "0,1" for multiple GPUs
+
+# Clear the cached device count to ensure PyTorch re-evaluates available devices
+torch.cuda.device_count.cache_clear()
+
 # System stuff
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cuda:3' if torch.cuda.is_available() else 'cpu'
 wandb_entity = args.wandb_entity
 wandb_log = args.use_wandb
 torch.backends.cuda.matmul.allow_tf32 = True
@@ -48,6 +62,7 @@ torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.deterministic = False
 
 # Model setup
+start_epoch = 0
 top_k = 1
 eval_iters = 1000
 eval_interval = 5
@@ -58,7 +73,7 @@ beta1 = 0.9
 beta2 = 0.999
 decay_lr = True
 args.compile = False if device == 'cpu' else False
-args.use_flash = True if device == 'cuda' else False
+args.use_flash = True if device[:4] == 'cuda' else False
 warmup_iters = 125
 min_lr = 1e-6
 
@@ -72,9 +87,9 @@ train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True, 
 test_loader = DataLoader(test_data, batch_size=args.batch_size, shuffle=True, collate_fn=test_data.collate_fn)
 
 target_len = train_data.num_tokens - train_data.num_prefix_tokens
-max_iters = len(train_data) * args.epochs
+max_iters = args.n_train * args.epochs//args.batch_size
 lr_decay_iters = max_iters
-args.block_size = 6
+args.block_size = 17
 args.vocab_size = tokenizer.vocab_size
 args.teacherless_token = tokenizer.encode('$')[0] if args.teacherless else None
 
@@ -83,8 +98,28 @@ model = get_model(args)
 if args.compile:
     print("Compiling the model... (takes a ~minute)")
     model = torch.compile(model)
-model = torch.nn.DataParallel(model)
-model.to(device)
+if args.resume:
+    checkpoint_dir = "../../../../data/user_data/clding/checkpoints_maskfb10_12000"
+    checkpoint_path = os.path.join(checkpoint_dir, "model_checkpoint_epoch_840.pt")
+    checkpoint = torch.load(checkpoint_path, map_location=device)
+    new_state_dict = {}
+    for k, v in checkpoint.items():
+        new_key = k.replace("module.", "")  # Remove 'module.' prefix
+        new_state_dict[new_key] = v
+    model.load_state_dict(new_state_dict)
+print(device)
+try:
+    model.to(device)
+    print("Model moved to", device)
+except Exception as e:
+    print(f"Failed to move model to {device}: {e}")
+    torch.cuda.empty_cache()  # Clear GPU memory if any allocation happened
+    device = torch.device("cpu")
+    model.to(device)
+    print("Model moved to CPU as fallback")
+# model.to(device)
+# model = torch.nn.DataParallel(model)
+# model.to(device)
 model.train()
 
 # Optimizer and context setup
@@ -99,26 +134,31 @@ if wandb_log:
 
 results = {}
 num_iters = 0
+if args.resume:
+    start_epoch = 841
+    num_iters = start_epoch * args.n_train // args.batch_size
 
-for ep in range(args.epochs):
+for ep in range(start_epoch, args.epochs):
     train_bar = tqdm(train_loader)
     total_loss, total_acc = AverageMeter(), AverageMeter()
 
     for x, y, attn_mask in train_bar:
+        # print(x.shape, y.shape, attn_mask.shape)
         x, y, attn_mask = x.to(device), y.to(device), attn_mask.to(device)
-
-        if ep % args.save_every == 0 and ep > 0:
-            checkpoint_dir = "../../../../data/user_data/clding/checkpoints"
+        # print('hi')
+        if ep % args.save_every == 0 and ep > 500:
+            checkpoint_dir = f"../../../../data/user_data/clding/checkpoints_normalfb_{args.n_train}"
             checkpoint_path = os.path.join(checkpoint_dir, f"model_checkpoint_epoch_{ep}.pt")
             os.makedirs(checkpoint_dir, exist_ok=True)
             torch.save(model.state_dict(), checkpoint_path)
-
+        # print('hi1')
         # Learning rate scheduling
         lr = get_lr(num_iters, args.lr, warmup_iters, lr_decay_iters, min_lr) if decay_lr else args.lr
         for param_group in optimizer.param_groups:
             param_group['lr'] = lr
-
+        # print('hi2')
         with ctx:
+            # print("Data prepared:", x.shape, y.shape, attn_mask.shape)
             logits, loss, accs = model(x, y, attn_mask)
         
         loss = loss.mean()
@@ -158,3 +198,5 @@ for ep in range(args.epochs):
             "learning_rate": lr,
             "iteration": num_iters
         })
+    
+    print(lr)

@@ -30,7 +30,7 @@ def get_dataset(args, tokenizer, device):
 
     elif args.dataset == 'reverse':
         data_path = './data/datasets/reverse/'
-        train_path, test_path = data_path + f'train_{args.n_nodes}.txt', data_path + f'test_{args.n_nodes}.txt'
+        train_path, test_path = data_path + f'train_normalfb20000.txt', data_path + f'test_teacherless_20000.txt'
         train_data = Reverse(tokenizer=tokenizer, n_samples=args.n_train, data_path=train_path, device=device,
                              teacherless_token=teacherless_token)
         test_data = Reverse(tokenizer=tokenizer, n_samples=args.n_test, data_path=test_path, device=device,

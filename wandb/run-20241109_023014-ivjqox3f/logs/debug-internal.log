@@ -1,0 +1,229 @@
+2024-11-09 02:30:14,184 INFO    StreamThr :3568637 [internal.py:wandb_internal():86] W&B internal server running at pid: 3568637, started at: 2024-11-09 02:30:14.184098
+2024-11-09 02:30:14,185 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: status
+2024-11-09 02:30:14,195 INFO    WriterThread:3568637 [datastore.py:open_for_write():87] open: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/run-ivjqox3f.wandb
+2024-11-09 02:30:14,195 DEBUG   SenderThread:3568637 [sender.py:send():382] send: header
+2024-11-09 02:30:14,203 DEBUG   SenderThread:3568637 [sender.py:send():382] send: run
+2024-11-09 02:30:14,433 INFO    SenderThread:3568637 [dir_watcher.py:__init__():211] watching files in: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files
+2024-11-09 02:30:14,434 INFO    SenderThread:3568637 [sender.py:_start_run_threads():1136] run started: ivjqox3f with start time 1731137414.18523
+2024-11-09 02:30:14,443 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: check_version
+2024-11-09 02:30:14,444 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: check_version
+2024-11-09 02:30:14,529 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: run_start
+2024-11-09 02:30:14,555 DEBUG   HandlerThread:3568637 [system_info.py:__init__():27] System info init
+2024-11-09 02:30:14,556 DEBUG   HandlerThread:3568637 [system_info.py:__init__():42] System info init done
+2024-11-09 02:30:14,556 INFO    HandlerThread:3568637 [system_monitor.py:start():194] Starting system monitor
+2024-11-09 02:30:14,556 INFO    SystemMonitor:3568637 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-11-09 02:30:14,556 INFO    HandlerThread:3568637 [system_monitor.py:probe():214] Collecting system info
+2024-11-09 02:30:14,556 INFO    SystemMonitor:3568637 [interfaces.py:start():190] Started cpu monitoring
+2024-11-09 02:30:14,557 INFO    SystemMonitor:3568637 [interfaces.py:start():190] Started disk monitoring
+2024-11-09 02:30:14,561 INFO    SystemMonitor:3568637 [interfaces.py:start():190] Started gpu monitoring
+2024-11-09 02:30:14,561 INFO    SystemMonitor:3568637 [interfaces.py:start():190] Started memory monitoring
+2024-11-09 02:30:14,565 INFO    SystemMonitor:3568637 [interfaces.py:start():190] Started network monitoring
+2024-11-09 02:30:14,625 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:14,625 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:14,629 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:14,634 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:14,641 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:14,690 DEBUG   HandlerThread:3568637 [system_info.py:probe():151] Probing system
+2024-11-09 02:30:14,692 DEBUG   HandlerThread:3568637 [system_info.py:_probe_git():136] Probing git
+2024-11-09 02:30:14,700 DEBUG   HandlerThread:3568637 [system_info.py:_probe_git():144] Probing git done
+2024-11-09 02:30:14,700 DEBUG   HandlerThread:3568637 [system_info.py:probe():199] Probing system done
+2024-11-09 02:30:14,700 DEBUG   HandlerThread:3568637 [system_monitor.py:probe():223] {'os': 'Linux-5.14.0-427.40.1.el9_4.x86_64-x86_64-with-glibc2.34', 'python': '3.10.15', 'heartbeatAt': '2024-11-09T07:30:14.690500', 'startedAt': '2024-11-09T07:30:14.166095', 'docker': None, 'cuda': None, 'args': ('--model', 'gpt', '--n_train', '1500', '--n_test', '5000', '--batch_size', '128', '--dataset', 'reverse', '--n_nodes', '1000', '--lr', '0.00001', '--epochs', '2000', '--teacherless', '--teacherless', '--use_wandb', '--wandb_entity', 'cdingg'), 'state': 'running', 'program': '/home/clding/aditi/reversal/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/22charlesduck/reversal', 'commit': '06d34c883a80c64361fae4805f48fa9d907c1261'}, 'email': None, 'root': '/home/clding/aditi/reversal', 'host': 'babel-0-37', 'username': 'clding', 'executable': '/home/clding/miniconda3/envs/reversal/bin/python3', 'cpu_count': 128, 'cpu_count_logical': 256, 'cpu_freq': {'current': 2474.89536328125, 'min': 1500.0, 'max': 2450.0}, 'cpu_freq_per_core': [{'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3524.59, 'min': 1500.0, 'max': 2450.0}, {'current': 3524.869, 'min': 1500.0, 'max': 2450.0}, {'current': 3524.869, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3286.726, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3524.775, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3304.736, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}], 'disk': {'/': {'total': 220.41033172607422, 'used': 70.93511581420898}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 1007.1740036010742}}
+2024-11-09 02:30:14,700 INFO    HandlerThread:3568637 [system_monitor.py:probe():224] Finished collecting system info
+2024-11-09 02:30:14,700 INFO    HandlerThread:3568637 [system_monitor.py:probe():227] Publishing system info
+2024-11-09 02:30:14,700 DEBUG   HandlerThread:3568637 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-11-09 02:30:15,435 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/conda-environment.yaml
+2024-11-09 02:30:16,644 DEBUG   HandlerThread:3568637 [system_info.py:_save_conda():220] Saving conda packages done
+2024-11-09 02:30:16,647 INFO    HandlerThread:3568637 [system_monitor.py:probe():229] Finished publishing system info
+2024-11-09 02:30:16,647 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:16,650 DEBUG   SenderThread:3568637 [sender.py:send():382] send: files
+2024-11-09 02:30:16,650 INFO    SenderThread:3568637 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-11-09 02:30:16,650 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:16,652 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:16,655 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: python_packages
+2024-11-09 02:30:16,656 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: stop_status
+2024-11-09 02:30:16,662 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: python_packages
+2024-11-09 02:30:16,665 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: stop_status
+2024-11-09 02:30:16,666 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-09 02:30:16,666 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:16,679 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:16,781 DEBUG   SenderThread:3568637 [sender.py:send():382] send: telemetry
+2024-11-09 02:30:16,781 DEBUG   SenderThread:3568637 [sender.py:send():382] send: telemetry
+2024-11-09 02:30:16,781 DEBUG   SenderThread:3568637 [sender.py:send():382] send: run
+2024-11-09 02:30:16,870 INFO    SenderThread:3568637 [sender.py:send_run():1010] updated run: ivjqox3f
+2024-11-09 02:30:16,927 INFO    wandb-upload_0:3568637 [upload_job.py:push():131] Uploaded file /tmp/tmprerrvs9hwandb/oftfpih5-wandb-metadata.json
+2024-11-09 02:30:17,435 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/config.yaml
+2024-11-09 02:30:17,436 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/conda-environment.yaml
+2024-11-09 02:30:17,436 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:17,436 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/requirements.txt
+2024-11-09 02:30:17,436 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/wandb-metadata.json
+2024-11-09 02:30:18,681 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:18,682 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:18,682 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:18,688 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:18,694 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:19,303 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: status_report
+2024-11-09 02:30:19,437 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:20,696 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:20,697 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:20,697 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:20,702 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:20,708 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:21,439 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:22,710 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:22,711 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:22,712 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:22,717 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:22,729 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:23,440 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:24,624 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: status_report
+2024-11-09 02:30:24,732 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:24,733 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:24,734 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: GPU requires restart
+2024-11-09 02:30:24,739 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:24,745 ERROR   gpu       :3568637 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-11-09 02:30:25,441 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:25,615 DEBUG   SenderThread:3568637 [sender.py:send():382] send: exit
+2024-11-09 02:30:25,615 INFO    SenderThread:3568637 [sender.py:send_exit():589] handling exit code: 255
+2024-11-09 02:30:25,615 INFO    SenderThread:3568637 [sender.py:send_exit():591] handling runtime: 11
+2024-11-09 02:30:25,616 INFO    SenderThread:3568637 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-11-09 02:30:25,616 INFO    SenderThread:3568637 [sender.py:send_exit():597] send defer
+2024-11-09 02:30:25,616 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,616 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 0
+2024-11-09 02:30:25,617 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,617 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-11-09 02:30:25,617 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 1
+2024-11-09 02:30:25,617 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,617 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 1
+2024-11-09 02:30:25,617 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,617 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-11-09 02:30:25,617 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 2
+2024-11-09 02:30:25,617 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,617 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 2
+2024-11-09 02:30:25,617 INFO    HandlerThread:3568637 [system_monitor.py:finish():203] Stopping system monitor
+2024-11-09 02:30:25,617 DEBUG   SystemMonitor:3568637 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-11-09 02:30:25,618 DEBUG   SystemMonitor:3568637 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-11-09 02:30:25,618 DEBUG   SystemMonitor:3568637 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-11-09 02:30:25,618 INFO    HandlerThread:3568637 [interfaces.py:finish():202] Joined cpu monitor
+2024-11-09 02:30:25,619 INFO    HandlerThread:3568637 [interfaces.py:finish():202] Joined disk monitor
+2024-11-09 02:30:25,726 ERROR   gpu       :3568637 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-11-09 02:30:25,852 ERROR   gpu       :3568637 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-11-09 02:30:25,852 ERROR   gpu       :3568637 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-11-09 02:30:25,852 INFO    HandlerThread:3568637 [interfaces.py:finish():202] Joined gpu monitor
+2024-11-09 02:30:25,852 INFO    HandlerThread:3568637 [interfaces.py:finish():202] Joined memory monitor
+2024-11-09 02:30:25,852 INFO    HandlerThread:3568637 [interfaces.py:finish():202] Joined network monitor
+2024-11-09 02:30:25,853 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,853 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-11-09 02:30:25,853 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 3
+2024-11-09 02:30:25,853 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,853 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 3
+2024-11-09 02:30:25,853 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,853 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-11-09 02:30:25,853 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 4
+2024-11-09 02:30:25,853 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,853 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 4
+2024-11-09 02:30:25,853 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,854 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-11-09 02:30:25,854 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 5
+2024-11-09 02:30:25,854 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,854 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 5
+2024-11-09 02:30:25,854 DEBUG   SenderThread:3568637 [sender.py:send():382] send: summary
+2024-11-09 02:30:25,855 INFO    SenderThread:3568637 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-11-09 02:30:25,855 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,855 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-11-09 02:30:25,855 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 6
+2024-11-09 02:30:25,855 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,855 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 6
+2024-11-09 02:30:25,855 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,856 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-11-09 02:30:25,859 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: status_report
+2024-11-09 02:30:25,951 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 7
+2024-11-09 02:30:25,951 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:25,951 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 7
+2024-11-09 02:30:25,951 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:25,951 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-11-09 02:30:26,442 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/config.yaml
+2024-11-09 02:30:26,442 INFO    Thread-12 :3568637 [dir_watcher.py:_on_file_created():271] file/dir created: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/wandb-summary.json
+2024-11-09 02:30:26,615 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-09 02:30:26,890 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 8
+2024-11-09 02:30:26,890 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: poll_exit
+2024-11-09 02:30:26,891 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:26,891 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 8
+2024-11-09 02:30:26,891 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:26,891 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-11-09 02:30:26,891 INFO    SenderThread:3568637 [job_builder.py:build():296] Attempting to build job artifact
+2024-11-09 02:30:26,892 INFO    SenderThread:3568637 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-11-09 02:30:26,915 INFO    SenderThread:3568637 [job_builder.py:build():402] adding wandb-job metadata file
+2024-11-09 02:30:26,919 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 9
+2024-11-09 02:30:26,920 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:26,920 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 9
+2024-11-09 02:30:26,920 DEBUG   SenderThread:3568637 [sender.py:send():382] send: artifact
+2024-11-09 02:30:27,239 INFO    SenderThread:3568637 [sender.py:send_artifact():1494] sent artifact job-https___github.com_22charlesduck_reversal_train.py - {'id': 'QXJ0aWZhY3Q6MTMxNDYxOTc5MQ==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ4NjM3NTgxMg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTMxNDYxOTc5MQ==', 'versionIndex': 5}}}
+2024-11-09 02:30:27,239 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,239 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-11-09 02:30:27,239 INFO    SenderThread:3568637 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-11-09 02:30:27,443 INFO    SenderThread:3568637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:27,443 INFO    SenderThread:3568637 [dir_watcher.py:finish():388] scan: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files
+2024-11-09 02:30:27,443 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/wandb-metadata.json wandb-metadata.json
+2024-11-09 02:30:27,444 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/conda-environment.yaml conda-environment.yaml
+2024-11-09 02:30:27,444 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/wandb-summary.json wandb-summary.json
+2024-11-09 02:30:27,446 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/requirements.txt requirements.txt
+2024-11-09 02:30:27,447 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/config.yaml config.yaml
+2024-11-09 02:30:27,449 INFO    SenderThread:3568637 [dir_watcher.py:finish():402] scan save: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log output.log
+2024-11-09 02:30:27,451 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 10
+2024-11-09 02:30:27,451 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:27,451 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 10
+2024-11-09 02:30:27,451 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,451 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-11-09 02:30:27,451 INFO    SenderThread:3568637 [file_pusher.py:finish():175] shutting down file pusher
+2024-11-09 02:30:27,616 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-09 02:30:27,616 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: poll_exit
+2024-11-09 02:30:27,654 INFO    wandb-upload_0:3568637 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/conda-environment.yaml
+2024-11-09 02:30:27,654 INFO    wandb-upload_1:3568637 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/wandb-summary.json
+2024-11-09 02:30:27,670 INFO    wandb-upload_3:3568637 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/config.yaml
+2024-11-09 02:30:27,676 INFO    wandb-upload_4:3568637 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/output.log
+2024-11-09 02:30:27,685 INFO    wandb-upload_2:3568637 [upload_job.py:push():131] Uploaded file /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/files/requirements.txt
+2024-11-09 02:30:27,885 INFO    Thread-11 (_thread_body):3568637 [sender.py:transition_state():617] send defer: 11
+2024-11-09 02:30:27,885 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:27,885 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 11
+2024-11-09 02:30:27,886 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,886 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-11-09 02:30:27,886 INFO    SenderThread:3568637 [file_pusher.py:join():181] waiting for file pusher
+2024-11-09 02:30:27,886 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 12
+2024-11-09 02:30:27,886 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:27,886 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 12
+2024-11-09 02:30:27,886 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,886 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-11-09 02:30:27,886 INFO    SenderThread:3568637 [file_stream.py:finish():595] file stream finish called
+2024-11-09 02:30:27,981 INFO    SenderThread:3568637 [file_stream.py:finish():599] file stream finish is done
+2024-11-09 02:30:27,982 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 13
+2024-11-09 02:30:27,982 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:27,982 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 13
+2024-11-09 02:30:27,982 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,982 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-11-09 02:30:27,982 INFO    SenderThread:3568637 [sender.py:transition_state():617] send defer: 14
+2024-11-09 02:30:27,982 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: defer
+2024-11-09 02:30:27,982 INFO    HandlerThread:3568637 [handler.py:handle_request_defer():172] handle defer: 14
+2024-11-09 02:30:27,982 DEBUG   SenderThread:3568637 [sender.py:send():382] send: final
+2024-11-09 02:30:27,983 DEBUG   SenderThread:3568637 [sender.py:send():382] send: footer
+2024-11-09 02:30:27,983 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: defer
+2024-11-09 02:30:27,983 INFO    SenderThread:3568637 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-11-09 02:30:27,983 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-09 02:30:27,983 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-09 02:30:27,983 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: poll_exit
+2024-11-09 02:30:27,984 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: server_info
+2024-11-09 02:30:27,984 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: poll_exit
+2024-11-09 02:30:27,984 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: get_summary
+2024-11-09 02:30:27,984 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: sampled_history
+2024-11-09 02:30:27,984 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: server_info
+2024-11-09 02:30:27,988 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-09 02:30:27,991 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: job_info
+2024-11-09 02:30:28,223 DEBUG   SenderThread:3568637 [sender.py:send_request():409] send_request: job_info
+2024-11-09 02:30:28,224 INFO    MainThread:3568637 [wandb_run.py:_footer_history_summary_info():3857] rendering history
+2024-11-09 02:30:28,224 INFO    MainThread:3568637 [wandb_run.py:_footer_history_summary_info():3889] rendering summary
+2024-11-09 02:30:28,224 INFO    MainThread:3568637 [wandb_run.py:_footer_sync_info():3816] logging synced files
+2024-11-09 02:30:28,224 DEBUG   HandlerThread:3568637 [handler.py:handle_request():146] handle_request: shutdown
+2024-11-09 02:30:28,224 INFO    HandlerThread:3568637 [handler.py:finish():869] shutting down handler
+2024-11-09 02:30:28,991 INFO    WriterThread:3568637 [datastore.py:close():296] close: /home/clding/aditi/reversal/wandb/run-20241109_023014-ivjqox3f/run-ivjqox3f.wandb
+2024-11-09 02:30:29,224 INFO    SenderThread:3568637 [sender.py:finish():1572] shutting down sender
+2024-11-09 02:30:29,224 INFO    SenderThread:3568637 [file_pusher.py:finish():175] shutting down file pusher
+2024-11-09 02:30:29,224 INFO    SenderThread:3568637 [file_pusher.py:join():181] waiting for file pusher

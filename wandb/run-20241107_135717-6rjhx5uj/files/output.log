@@ -1,0 +1,15 @@
+
+
+
+
+Epoch: [0/1001] Loss: 3.6605 Acc: 0.00%:  12%|██████████████▊                                                                                                       | 3/24 [00:46<05:25, 15.49s/it]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 130, in <module>
+    torch.save(model.state_dict(), checkpoint_path)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 628, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 502, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 473, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+RuntimeError: File ../../../../data/user_data/clding/checkpoints_tokens_3000/model_checkpoint_epoch_0.pt cannot be opened.

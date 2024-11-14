@@ -1,0 +1,17 @@
+  0%|                                                                                                                                                    | 0/3 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 145, in <module>
+    scaler.step(optimizer)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 378, in step
+    return optimizer.step(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/optim/adamw.py", line 187, in step
+    adamw(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/optim/adamw.py", line 339, in adamw
+    func(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/optim/adamw.py", line 608, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 1 has a total capacity of 47.43 GiB of which 25.69 MiB is free. Process 828383 has 13.82 GiB memory in use. Process 830374 has 18.23 GiB memory in use. Including non-PyTorch memory, this process has 15.34 GiB memory in use. Of the allocated memory 13.98 GiB is allocated by PyTorch, and 1.04 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

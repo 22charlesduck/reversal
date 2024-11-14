@@ -1,0 +1,51 @@
+Epoch: [0/2000] Loss: 10.9190 Acc: 0.00%: 100%|███| 3/3 [00:01<00:00,  2.95it/s]
+Epoch: [1/2000] Loss: 10.7373 Acc: 0.00%:  67%|██ | 2/3 [00:00<00:00,  3.10it/s]
+1.6e-07
+Epoch: [1/2000] Loss: 10.6973 Acc: 0.00%: 100%|███| 3/3 [00:00<00:00,  3.48it/s]
+Epoch: [2/2000] Loss: 10.0921 Acc: 0.00%: 100%|███| 3/3 [00:00<00:00,  3.48it/s]
+Epoch: [3/2000] Loss: 9.1283 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.45it/s]
+  0%|                                                     | 0/3 [00:00<?, ?it/s]
+6.4e-07
+8.8e-07
+Epoch: [4/2000] Loss: 7.8775 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.50it/s]
+Epoch: [5/2000] Loss: 6.4209 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.47it/s]
+Epoch: [6/2000] Loss: 5.4232 Acc: 0.00%:  33%|█▎  | 1/3 [00:00<00:00,  3.15it/s]
+1.3600000000000001e-06
+Epoch: [6/2000] Loss: 5.0200 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.38it/s]
+Epoch: [7/2000] Loss: 4.0678 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.43it/s]
+Epoch: [8/2000] Loss: 3.4913 Acc: 0.00%:  67%|██▋ | 2/3 [00:00<00:00,  3.09it/s]
+1.84e-06
+Epoch: [8/2000] Loss: 3.4617 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.43it/s]
+Epoch: [9/2000] Loss: 2.9967 Acc: 0.00%: 100%|████| 3/3 [00:00<00:00,  3.50it/s]
+Epoch: [10/2000] Loss: 2.6705 Acc: 0.00%: 100%|███| 3/3 [00:00<00:00,  3.46it/s]
+  0%|                                                     | 0/3 [00:00<?, ?it/s]
+2.32e-06
+Epoch: [11/2000] Loss: 2.3757 Acc: 0.00%:  33%|█  | 1/3 [00:00<00:00,  2.23it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 158, in <module>
+    logits, loss, accs = model(x, y, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/base_model.py", line 91, in forward
+    x = block(x, self.cache, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/gpt.py", line 24, in forward
+    x = x + self.attn(self.ln_1(x), cache, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/lib.py", line 75, in forward
+    queries = self.queries_linear(x)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

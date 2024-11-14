@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+
+Epoch: [0/2000] Loss: 7.9879 Acc: 0.00%:  96%|██████████████████████████████████████████████  | 23/24 [00:17<00:00,  1.36it/s]
+Epoch: [0/2000] Loss: 7.9089 Acc: 0.00%: 100%|████████████████████████████████████████████████| 24/24 [00:18<00:00,  1.33it/s]
+
+
+
+Epoch: [1/2000] Loss: 2.9916 Acc: 0.00%:  42%|████████████████████                            | 10/24 [00:08<00:11,  1.18it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 164, in <module>
+    scaler.scale(loss).backward()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

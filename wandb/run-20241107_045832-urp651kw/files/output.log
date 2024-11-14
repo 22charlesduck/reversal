@@ -1,0 +1,25 @@
+  0%|                                                                                                                                                  | 0/118 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 138, in <module>
+    logits, loss, accs = model(x, y, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/base_model.py", line 91, in forward
+    x = block(x, self.cache, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/gpt.py", line 24, in forward
+    x = x + self.attn(self.ln_1(x), cache, attn_mask)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/clding/aditi/reversal/models/lib.py", line 130, in forward
+    out = torch.einsum('bmnh,bnhd->bmhd', att, values)  # [batch_size, query_len, n_heads, head_dim]
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/functional.py", line 380, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+RuntimeError: einsum(): the number of subscripts in the equation (4) does not match the number of dimensions (6) for operand 0 and no ellipsis was given

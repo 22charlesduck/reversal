@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [0/3000] Loss: 6.5241 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.97it/s]
+Epoch: [1/3000] Loss: 4.8594 Acc: 0.00%:   1%|   | 1/94 [00:00<00:30,  3.09it/s]
+
+
+Epoch: [1/3000] Loss: 4.8258 Acc: 0.00%:  15%|▎ | 14/94 [00:04<00:27,  2.93it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 141, in <module>
+    for x, y, attn_mask in train_bar:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/clding/aditi/reversal/data/reverse.py", line 112, in __getitem__
+    return x.to(self.device), y.long().to(self.device)
+KeyboardInterrupt

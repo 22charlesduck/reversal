@@ -1,0 +1,159 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [0/2500] Loss: 3.8711 Acc: 0.00%:  99%|█▉| 93/94 [00:31<00:00,  2.94it/s]
+Epoch: [0/2500] Loss: 3.8574 Acc: 0.00%: 100%|██| 94/94 [00:32<00:00,  2.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [1/2500] Loss: 2.2213 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.95it/s]
+  0%|                                                    | 0/94 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [2/2500] Loss: 2.1075 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.94it/s]
+  0%|                                                    | 0/94 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [3/2500] Loss: 2.0419 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.94it/s]
+Epoch: [4/2500] Loss: 2.2264 Acc: 0.00%:   1%|   | 1/94 [00:00<00:30,  3.06it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [4/2500] Loss: 2.0069 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.95it/s]
+Epoch: [5/2500] Loss: 2.0085 Acc: 0.00%:   1%|   | 1/94 [00:00<00:30,  3.03it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [5/2500] Loss: 1.9816 Acc: 0.00%:  96%|█▉| 90/94 [00:30<00:01,  2.93it/s]
+Epoch: [5/2500] Loss: 1.9820 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [6/2500] Loss: 1.9674 Acc: 0.00%:  96%|█▉| 90/94 [00:30<00:01,  2.95it/s]
+Epoch: [6/2500] Loss: 1.9679 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [7/2500] Loss: 1.9554 Acc: 0.00%:  97%|█▉| 91/94 [00:30<00:01,  2.93it/s]
+Epoch: [7/2500] Loss: 1.9572 Acc: 0.00%: 100%|██| 94/94 [00:31<00:00,  2.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch: [8/2500] Loss: 1.9446 Acc: 0.00%:  91%|█▊| 86/94 [00:29<00:02,  2.91it/s]
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 164, in <module>
+    scaler.scale(loss).backward()
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

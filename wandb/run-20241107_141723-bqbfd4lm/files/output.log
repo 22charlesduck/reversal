@@ -1,0 +1,16 @@
+  0%|                                                                                                                                                                       | 0/24 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 629, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol, _disable_byteorder_record)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 843, in _save
+    zip_file.write_record('data.pkl', data_value, len(data_value))
+RuntimeError: [enforce fail at inline_container.cc:764] . PytorchStreamWriter failed writing file data.pkl: file write failed
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/clding/aditi/reversal/train.py", line 130, in <module>
+    torch.save(model.state_dict(), checkpoint_path)
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 628, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/clding/miniconda3/envs/reversal/lib/python3.10/site-packages/torch/serialization.py", line 476, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:595] . unexpected pos 128 vs 0
